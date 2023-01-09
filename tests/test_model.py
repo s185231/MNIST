@@ -3,12 +3,10 @@ from src.models.model import MyAwesomeModel
 
 
 
-def model_test(idx):
+def test_model(idx):
     train, test = mnist()
     im = test[0][idx]
     num_classes = 5
     model = MyAwesomeModel(num_classes)
     out = model(im)
-    return len(out)
-
-assert model_test(0) == 5
+    assert test_model(0) == 5
